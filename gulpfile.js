@@ -140,10 +140,6 @@ gulp.task('sass', ['sprite'], function() {
             errorHandler: onError
         }))
         .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(prefix({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
         .pipe(sourcemaps.init())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(sources.css.dist))

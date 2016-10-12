@@ -1,0 +1,241 @@
+/*
+  SASS variables are information about icon's compiled state, stored under its original file name
+
+  .icon-home
+    width: $icon-home-width
+
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+
+  At the bottom of this section, we provide information about the spritesheet itself
+  $spritesheet: width height image $spritesheet-sprites
+  */
+$apple-btn-name: 'apple-btn'
+$apple-btn-x: 0px
+$apple-btn-y: 72px
+$apple-btn-offset-x: 0px
+$apple-btn-offset-y: -72px
+$apple-btn-width: 208px
+$apple-btn-height: 72px
+$apple-btn-total-width: 230px
+$apple-btn-total-height: 162px
+$apple-btn-image: '../images/sprite.png'
+$apple-btn: (0px, 72px, 0px, -72px, 208px, 72px, 230px, 162px, '../images/sprite.png', 'apple-btn', )
+$google-btn-name: 'google-btn'
+$google-btn-x: 0px
+$google-btn-y: 0px
+$google-btn-offset-x: 0px
+$google-btn-offset-y: 0px
+$google-btn-width: 230px
+$google-btn-height: 72px
+$google-btn-total-width: 230px
+$google-btn-total-height: 162px
+$google-btn-image: '../images/sprite.png'
+$google-btn: (0px, 0px, 0px, 0px, 230px, 72px, 230px, 162px, '../images/sprite.png', 'google-btn', )
+$icon-facebook-name: 'icon-facebook'
+$icon-facebook-x: 208px
+$icon-facebook-y: 72px
+$icon-facebook-offset-x: -208px
+$icon-facebook-offset-y: -72px
+$icon-facebook-width: 15px
+$icon-facebook-height: 30px
+$icon-facebook-total-width: 230px
+$icon-facebook-total-height: 162px
+$icon-facebook-image: '../images/sprite.png'
+$icon-facebook: (208px, 72px, -208px, -72px, 15px, 30px, 230px, 162px, '../images/sprite.png', 'icon-facebook', )
+$icon-vk-name: 'icon-vk'
+$icon-vk-x: 0px
+$icon-vk-y: 144px
+$icon-vk-offset-x: 0px
+$icon-vk-offset-y: -144px
+$icon-vk-width: 32px
+$icon-vk-height: 18px
+$icon-vk-total-width: 230px
+$icon-vk-total-height: 162px
+$icon-vk-image: '../images/sprite.png'
+$icon-vk: (0px, 144px, 0px, -144px, 32px, 18px, 230px, 162px, '../images/sprite.png', 'icon-vk', )
+$icon-youtube-name: 'icon-youtube'
+$icon-youtube-x: 208px
+$icon-youtube-y: 102px
+$icon-youtube-offset-x: -208px
+$icon-youtube-offset-y: -102px
+$icon-youtube-width: 22px
+$icon-youtube-height: 18px
+$icon-youtube-total-width: 230px
+$icon-youtube-total-height: 162px
+$icon-youtube-image: '../images/sprite.png'
+$icon-youtube: (208px, 102px, -208px, -102px, 22px, 18px, 230px, 162px, '../images/sprite.png', 'icon-youtube', )
+$apple-btn-2x-name: 'apple-btn@2x'
+$apple-btn-2x-x: 0px
+$apple-btn-2x-y: 144px
+$apple-btn-2x-offset-x: 0px
+$apple-btn-2x-offset-y: -144px
+$apple-btn-2x-width: 416px
+$apple-btn-2x-height: 144px
+$apple-btn-2x-total-width: 460px
+$apple-btn-2x-total-height: 324px
+$apple-btn-2x-image: '../images/sprite@2x.png'
+$apple-btn-2x: (0px, 144px, 0px, -144px, 416px, 144px, 460px, 324px, '../images/sprite@2x.png', 'apple-btn@2x', )
+$google-btn-2x-name: 'google-btn@2x'
+$google-btn-2x-x: 0px
+$google-btn-2x-y: 0px
+$google-btn-2x-offset-x: 0px
+$google-btn-2x-offset-y: 0px
+$google-btn-2x-width: 460px
+$google-btn-2x-height: 144px
+$google-btn-2x-total-width: 460px
+$google-btn-2x-total-height: 324px
+$google-btn-2x-image: '../images/sprite@2x.png'
+$google-btn-2x: (0px, 0px, 0px, 0px, 460px, 144px, 460px, 324px, '../images/sprite@2x.png', 'google-btn@2x', )
+$icon-facebook-2x-name: 'icon-facebook@2x'
+$icon-facebook-2x-x: 416px
+$icon-facebook-2x-y: 144px
+$icon-facebook-2x-offset-x: -416px
+$icon-facebook-2x-offset-y: -144px
+$icon-facebook-2x-width: 30px
+$icon-facebook-2x-height: 60px
+$icon-facebook-2x-total-width: 460px
+$icon-facebook-2x-total-height: 324px
+$icon-facebook-2x-image: '../images/sprite@2x.png'
+$icon-facebook-2x: (416px, 144px, -416px, -144px, 30px, 60px, 460px, 324px, '../images/sprite@2x.png', 'icon-facebook@2x', )
+$icon-vk-2x-name: 'icon-vk@2x'
+$icon-vk-2x-x: 0px
+$icon-vk-2x-y: 288px
+$icon-vk-2x-offset-x: 0px
+$icon-vk-2x-offset-y: -288px
+$icon-vk-2x-width: 64px
+$icon-vk-2x-height: 36px
+$icon-vk-2x-total-width: 460px
+$icon-vk-2x-total-height: 324px
+$icon-vk-2x-image: '../images/sprite@2x.png'
+$icon-vk-2x: (0px, 288px, 0px, -288px, 64px, 36px, 460px, 324px, '../images/sprite@2x.png', 'icon-vk@2x', )
+$icon-youtube-2x-name: 'icon-youtube@2x'
+$icon-youtube-2x-x: 416px
+$icon-youtube-2x-y: 204px
+$icon-youtube-2x-offset-x: -416px
+$icon-youtube-2x-offset-y: -204px
+$icon-youtube-2x-width: 44px
+$icon-youtube-2x-height: 36px
+$icon-youtube-2x-total-width: 460px
+$icon-youtube-2x-total-height: 324px
+$icon-youtube-2x-image: '../images/sprite@2x.png'
+$icon-youtube-2x: (416px, 204px, -416px, -204px, 44px, 36px, 460px, 324px, '../images/sprite@2x.png', 'icon-youtube@2x', )
+$spritesheet-width: 230px
+$spritesheet-height: 162px
+$spritesheet-image: '../images/sprite.png'
+$spritesheet-sprites: ($apple-btn, $google-btn, $icon-facebook, $icon-vk, $icon-youtube, )
+$spritesheet: (230px, 162px, '../images/sprite.png', $spritesheet-sprites, )
+$retina-spritesheet-width: 460px
+$retina-spritesheet-height: 324px
+$retina-spritesheet-image: '../images/sprite@2x.png'
+$retina-spritesheet-sprites: ($apple-btn-2x, $google-btn-2x, $icon-facebook-2x, $icon-vk-2x, $icon-youtube-2x, )
+$retina-spritesheet: (460px, 324px, '../images/sprite@2x.png', $retina-spritesheet-sprites, )
+
+/*
+  These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+  The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+  */
+$apple-btn-group-name: 'apple-btn'
+$apple-btn-group: ('apple-btn', $apple-btn, $apple-btn-2x, )
+$google-btn-group-name: 'google-btn'
+$google-btn-group: ('google-btn', $google-btn, $google-btn-2x, )
+$icon-facebook-group-name: 'icon-facebook'
+$icon-facebook-group: ('icon-facebook', $icon-facebook, $icon-facebook-2x, )
+$icon-vk-group-name: 'icon-vk'
+$icon-vk-group: ('icon-vk', $icon-vk, $icon-vk-2x, )
+$icon-youtube-group-name: 'icon-youtube'
+$icon-youtube-group: ('icon-youtube', $icon-youtube, $icon-youtube-2x, )
+$retina-groups: ($apple-btn-group, $google-btn-group, $icon-facebook-group, $icon-vk-group, $icon-youtube-group, )
+
+/*
+  The provided mixins are intended to be used with the array-like variables
+
+  .icon-home
+    @include sprite-width($icon-home)
+
+  .icon-email
+    @include sprite($icon-email)
+
+  Example usage in HTML:
+    `display: block` sprite:
+    <div class="icon-home"></div>
+
+  To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+    // CSS
+    .icon {
+      display: inline-block;
+    }
+
+    // HTML
+    <i class="icon icon-home"></i>
+  */
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+/*
+  The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+    It should be used with a "retina group" variable.
+
+  The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+  $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, )
+
+  .icon-home
+    @include retina-sprite($icon-home-group)
+  */
+@mixin sprite-background-size($sprite)
+  $sprite-total-width: nth($sprite, 7)
+  $sprite-total-height: nth($sprite, 8)
+  background-size: $sprite-total-width $sprite-total-height
+
+@mixin retina-sprite($retina-group)
+  $normal-sprite: nth($retina-group, 2)
+  $retina-sprite: nth($retina-group, 3)
+  @include sprite($normal-sprite)
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    @include sprite-image($retina-sprite)
+    @include sprite-background-size($normal-sprite)
+
+/*
+  The `sprites` mixin generates identical output to the CSS template
+    but can be overridden inside of SASS
+
+  @include sprites($spritesheet-sprites)
+  */
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)
+
+/*
+  The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+    This yields the same output as CSS retina template but can be overridden in SASS
+
+  @include retina-sprites($retina-groups)
+  */
+@mixin retina-sprites($retina-groups)
+  @each $retina-group in $retina-groups
+    $sprite-name: nth($retina-group, 1)
+    .#{$sprite-name}
+      @include retina-sprite($retina-group)

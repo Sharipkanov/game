@@ -1,0 +1,512 @@
+@import "mixins"
+@import "sprites"
+@import "icons"
+
+body
+  background: #aaa
+  line-height: 1.2
+  font-family: 'Roboto-Regular', serif
+
+small
+  font-family: 'Roboto-Light', serif
+  font-size: 16px
+  line-height: 20px
+
+strong
+  font-family: 'Roboto-Bold', serif
+
+input, textarea, select, option
+  font-family: 'Roboto-Light', serif!important
+
+input[type=submit], button
+  font-family: 'Roboto-Medium', serif
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Roboto-Medium', serif
+
+iframe
+  margin-top: 40px
+  max-width: 900px!important
+  border: 2px solid #fff
+
+.-text-light
+  color: #fff
+
+.-text-italic
+  font-family: 'Merriweather-Italic', serif
+
+  &-large
+    @extend .-text-italic
+    font-size: 24px
+
+.-line-top
+  padding-top: 24px
+  position: relative
+
+  &-center
+    @extend .-line-top
+
+    &::before
+      position: absolute
+      top: 0
+      left: 50%
+      margin-left: -30px
+      width: 60px
+      height: 3px
+      background: #fff
+      content: ''
+
+  &-left
+    @extend .-line-top
+
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      width: 60px
+      height: 3px
+      background: #fff
+      content: ''
+
+.-mw-310
+  max-width: 310px
+
+.-mw-750
+  max-width: 750px
+
+.-mw-900
+  max-width: 900px
+
+.uk-container
+  max-width: 1392px
+  min-width: 960px
+
+.uk-button
+  font-size: 24px
+  padding: 16px
+  +transition(all .3s ease-in-out)
+
+.uk-button-danger
+  +border_radius(10px)
+  background-color: #d0021b
+  +box_shadow(0 2px 8px 4px rgba(0, 0, 0, 0.5))
+  color: #ffffff
+
+  &:hover,
+  &:active,
+  &:visited
+    background-color: #8e0314
+
+.uk-navbar
+  background: rgba(0,0,0,.5)
+  height: 80px
+  z-index: 3
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+
+  .uk-navbar-content
+    height: auto
+
+  .uk-navbar-flip
+    a
+      line-height: 80px
+      margin: 0 5px
+
+      &:last-child
+        margin: 0
+
+  .uk-navbar-center
+    max-width: 70%
+    text-align: center
+
+    @media screen and (max-width: 1030px)
+      max-width: 75%
+
+  .uk-navbar-nav
+    display: inline-block
+    float: none
+
+    li
+      padding: 0 5px
+
+      a
+        background: transparent
+        border-bottom: 3px solid transparent
+        cursor: pointer
+        color: #fff
+        font-size: 20px
+        letter-spacing: 0.3px
+        padding: 0 10px
+        height: 80px
+        line-height: 80px
+
+      &.uk-active,
+      &:hover
+        a
+          border-bottom: 3px solid #fff
+
+.uk-panel-box
+  background: rgba(0,0,0,.6)
+  max-width: 1010px
+  margin: 0 auto
+  padding: 62px 130px
+  +box_sizing(border-box)
+
+  i
+    font-family: 'Merriweather-Italic', serif
+
+.uk-dotnav
+  >*
+    >*
+      width: 10px
+      height: 10px
+      background: rgba(255,255,255,.2)
+
+    &:hover
+      >*
+        background: #fff
+
+  >.uk-active>*
+    background: #fff
+
+.uk-slideset
+  +transition(height .3s ease-in-out)
+
+  li
+    overflow: hidden
+
+.uk-slidenav-position .uk-slidenav
+  display: inline-block!important
+  top: 100%
+  margin-top: 0
+
+.uk-slidenav-previous
+  display: inline-block
+  border-top: 2px solid #fff
+  border-left: 2px solid #fff
+  +transform(rotate(-45deg))
+  width: 12px
+  height: 12px
+  left: 100px!important
+
+  &::before
+    content: ''
+
+  &::after
+    content: ''
+
+.uk-slidenav-next
+  display: inline-block
+  border-top: 2px solid #fff
+  border-right: 2px solid #fff
+  +transform(rotate(45deg))
+  width: 12px
+  height: 12px
+  right: 100px!important
+
+  &::before
+    content: ''
+
+  &::after
+    content: ''
+
+.logo-header
+  max-width: 143px
+  margin-top: 10px
+
+.main__title
+  font-family: 'Roboto-Medium', serif
+  font-size: 64px
+  letter-spacing: 16px
+  text-shadow: 6px 0 1px rgba(255,255,255,.4)
+  color: #fff
+
+  &_excerpt
+    font-family: 'Merriweather-Italic', serif
+    font-size: 24px
+    display: block
+    letter-spacing: 1px
+    text-shadow: none
+
+.section
+  padding: 100px 0
+  +box_sizing(border-box)
+
+  &__title
+    font-size: 42px
+    font-weight: 500
+    letter-spacing: 2px
+    line-height: 45px
+    color: #ffffff
+    font-family: 'Roboto-Medium', serif
+
+    &_small
+      font-size: 18px
+      font-weight: 500
+      letter-spacing: 1px
+      color: #ffffff
+      font-family: 'Roboto-Medium', serif
+
+    &_light
+      font-size: 30px
+      font-weight: 300
+      letter-spacing: 1.7px
+      color: #ffffff
+      font-family: 'Roboto-Light', serif
+
+  &__text
+    font-size: 24px
+    color: #ffffff
+
+    &_larger
+      font-size: 24px
+      letter-spacing: 1.3px
+      color: #ffffff
+
+    &_smaller
+      font-size: 18px
+      line-height: 1.33
+      color: #ffffff
+
+    &_regular
+      font-family: 'Roboto-Regular', serif
+      font-size: 18px
+      color: #fff
+
+    &_number
+      font-size: 150px
+      letter-spacing: 3.3px
+      color: #ffffff
+
+      &_light
+        font-size: 30px
+        letter-spacing: 0.7px
+        color: #ffffff
+        font-family: 'Roboto-Light', serif
+
+.store__btns
+  a
+    display: inline-block
+    &:first-child
+      margin-right: 37px
+
+.callback-widget
+  max-width: 475px
+  display: inline-block
+
+  .uk-form
+    font-size: 0
+    padding: 0
+    margin: 0
+
+    .uk-form-row
+      display: inline-block
+      width: calc(51% - 7px)
+      font-size: 24px
+      vertical-align: top
+      margin: 0 7px 0 0
+      padding: 0
+
+      &:last-child
+        width: calc(49% - 7px)
+
+      &:last-child
+        margin: 0 0 0 7px
+
+      input[type=text]
+        display: block
+        width: 100%
+        +box_sizing(border-box)
+        height: 55px
+        outline: none
+        +border_radius(10px)
+        border: solid 1px #ffffff
+        background: transparent
+        color: #fff
+        padding: 0 17px
+
+        &::-webkit-input-placeholder
+          color: #fff
+
+        &::-moz-placeholder
+          color: #fff
+
+      .uk-button
+        display: block
+        width: 100%
+        padding: 12px 0
+        text-align: center
+
+.small-widget
+  padding: 16px 0 50px 0
+  p
+    font-family: 'Roboto-Medium', serif
+    font-size: 18px
+    color: #fff
+
+  a
+    color: #fff
+    font-size: 24px
+    font-family: 'Roboto-Regular', serif
+
+    &:hover
+      text-decoration: underline
+
+.circle
+  width: 100px
+  height: 100px
+  border: 2px solid transparent
+  +border_radius(50%)
+  text-align: center
+  p
+    font-size:
+    font-size: 48px
+    line-height: 100px
+
+
+  &__white
+    @extend .circle
+    border-color: #fff
+    p
+      color: #ffffff
+
+.box-attention
+  background: transparent
+  padding: 0
+  max-width: 730px
+  margin: 0 auto
+
+  > div
+    &:last-child
+      width: calc(100% - 120px)
+
+.gss
+  &__infos
+    margin: 143px 0 0 180px
+
+    @media screen and (max-width: 1200px)
+      margin: 143px 0 0 80px
+
+    @media screen and (max-width: 1030px)
+      margin: 143px 0 0 0
+
+    .main__title
+
+      &_excerpt
+        margin: 13px 0 0 0
+
+    .store__btns
+      margin: 28px 0 0 0
+
+    .section
+
+      &__text
+        &_smaller
+          margin: 42px 0 0 0
+
+    .callback-widget
+      margin: 40px 0 0 0
+
+  &__slideset
+    max-width: 480px
+    margin: 25px 0 0 171px
+
+    @media screen and (max-width: 1200px)
+      margin: 25px 0 0 80px
+
+    @media screen and (max-width: 1030px)
+      margin: 25px 0 0 0
+
+  &__image
+    max-width: 370px
+    margin: 130px 0 0 0
+
+.reviews-widget
+  overflow: hidden
+  padding-bottom: 70px
+
+  > div
+    font-size: 16px
+    float: left
+
+    &:first-child
+      width: 280px
+      height: 280px
+      +border-radius(50%)
+      border: 3px solid #fff
+      +box_sizing(border-box)
+
+    &:last-child
+      width: calc(100% - 310px)
+      float: right
+      margin-top: 20px
+
+  &_ava
+    max-width: 210px
+    +border_radius(50%)
+    margin-top: 35px
+
+.ws
+  background: url("../images/ws-bg.png")
+  background-size: cover
+
+.mps
+  background: url("../images/mps-bg.png")
+  background-size: cover
+
+.kss
+  background: url("../images/kss-bg.png")
+  background-size: cover
+
+.as
+  background: url("../images/as-bg.png")
+  background-size: cover
+
+.cs
+  background: url("../images/cs-bg.png")
+  background-size: cover
+
+  &__slideset
+
+    li
+      overflow: hidden
+      padding-bottom: 80px
+
+
+  .uk-slidenav-previous
+    left: 40%!important
+
+  .uk-slidenav-next
+    right: 40%!important
+
+.cgs
+  background: url("../images/cgs-bg.png")
+  background-size: cover
+
+  .gss__slideset
+    margin-top: 180px
+
+    .-text-italic
+      display: block
+      margin-bottom: 10px
+
+  .gss__image
+    margin: 0
+
+.lds
+  background: url("../images/lds-bg.png")
+  background-size: cover
+
+.rs
+  background: url("../images/rs-bg.png")
+  background-size: cover
+
+  &_slideset
+    margin: 120px auto 0 auto
+    max-width: 900px
+
+.bas
+  background: url("../images/bas-bg.png")
+  background-size: cover
