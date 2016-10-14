@@ -1,5 +1,4 @@
-@import "mixins"
-@import "sprites"
+@import "mixins/mixins"
 @import "icons"
 
 body
@@ -412,7 +411,7 @@ iframe
   letter-spacing: 1px
   color: rgba(255,255,255,.5)
   padding: 0 30px 0 30px
-  margin-left: -15px
+  margin: 0 0 0 -15px
   line-height: 80px
   background: #000
   position: relative
@@ -493,6 +492,13 @@ iframe
     margin-left: -11px
     content: ''
     z-index: 2
+
+  &.no-line-bot
+    &::after
+      display: none
+
+    &::before
+      display: none
 
   &__title
     font-size: 42px
@@ -621,7 +627,6 @@ iframe
   +border_radius(50%)
   text-align: center
   p
-    font-size:
     font-size: 48px
     line-height: 100px
 
@@ -795,6 +800,13 @@ iframe
       color: #ffffff
       font-family: 'Roboto-Medium', serif
 
+      p
+        font-size: 18px
+        line-height: 1.22
+        letter-spacing: 1px
+        color: #ffffff
+        font-family: 'Roboto-Medium', serif
+
 .was
   background-image: url("../images/was-bg.png")
 
@@ -962,6 +974,12 @@ iframe
       line-height: 1.22
       letter-spacing: 0.4px
       color: #ffffff
+
+      p
+        font-size: 18px
+        line-height: 1.22
+        letter-spacing: 0.4px
+        color: #ffffff
 
     &_socials
       margin-top: 20px

@@ -7,6 +7,7 @@ var gulp         = require('gulp'),
     htmlbeautify = require('gulp-html-beautify'),
     sass         = require("gulp-sass"),
     spritesmith  = require('gulp.spritesmith'),
+    compass      = require('gulp-compass'),
     prefix       = require("gulp-autoprefixer"),
     minifyCss    = require('gulp-minify-css'),
     uglify       = require('gulp-uglify'),
@@ -57,7 +58,7 @@ var sources = {
     images: {
         icons: {
             default: 'app/images/icons/*.png',
-            retina: 'app/images/icons/*@2x.png'
+            retina: 'app/images/icons-2x/*.png'
         },
         dist: 'app/images'
     }
@@ -133,6 +134,20 @@ gulp.task('sprite', function() {
     return spriteData.img.pipe(gulp.dest(sources.images.dist));
 });
 
+/* COMPASS ------------------------------------------------------------------ */
+gulp.task('compass', function () {
+    gulp.src(sources.sass.watch)
+        .pipe(plumber())
+        .pipe(compass({
+            sass: sources.sass.dist,
+            css: sources.css.dist,
+            js: sources.js.dist,
+            image: 'app/images'
+        }))
+        .pipe(gulp.dest(sources.css.dist))
+        .pipe(browserSync.reload({stream: true}));
+});
+
 /* SASS --------------------------------------------------------------------- */
 gulp.task('sass', ['sprite'], function() {
     return gulp.src(sources.sass.src)
@@ -200,11 +215,12 @@ gulp.task('build',["clean"], function(){
  ---------------------------------------------------------------------------- */
 gulp.task('watch', function () {
     // gulp.watch('bower.json', ["bower"]);
-    gulp.watch(sources.sass.watch, ['sass']);
+    gulp.watch(sources.sass.watch, ['compass']);
     // gulp.watch(sources.pug.watch, ["pug"]);
     gulp.watch(sources.twig.watch, ["twig"]);
-    gulp.watch(sources.images.icons.default, ["sass"]);
+    gulp.watch(sources.images.icons.default, ["compass"]);
+    gulp.watch(sources.images.icons.retina, ["compass"]);
     gulp.watch(sources.js.watch).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['browser-sync', 'twig', 'sass', 'watch']);
+gulp.task('default', ['browser-sync', 'twig', 'compass', 'watch']);
