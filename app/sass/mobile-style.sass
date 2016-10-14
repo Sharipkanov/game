@@ -1,0 +1,1052 @@
+@import "mixins/mixins"
+@import "icons"
+
+body
+  background: #aaa
+  line-height: 1.2
+  font-family: 'Roboto-Regular', serif
+  font-size: 12px
+
+a
+  &:hover
+    color: #fff
+
+small
+  font-family: 'Roboto-Light', serif
+  line-height: 20px
+  font-size: 12px
+  letter-spacing: 0.2px
+
+strong
+  font-family: 'Roboto-Bold', serif
+
+input, textarea, select, option
+  font-family: 'Roboto-Light', serif!important
+
+input[type=submit], button
+  font-family: 'Roboto-Medium', serif
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Roboto-Medium', serif
+
+iframe
+  margin-top: 40px
+  width: 100%
+  height: auto
+  border: 2px solid #fff
+
+.-text-light
+  color: #fff
+
+.-text-italic
+  font-family: 'Merriweather-Italic', serif
+
+  &-large
+    @extend .-text-italic
+    font-size: 24px
+
+  &-largest
+    @extend .-text-italic
+    font-size: 30px
+    letter-spacing: 3.5px
+
+.-text-normal
+  text-transform: none!important
+
+.-line-top
+  padding-top: 24px
+  position: relative
+
+  &-center
+    @extend .-line-top
+
+    &::before
+      position: absolute
+      top: 0
+      left: 50%
+      margin-left: -30px
+      width: 60px
+      height: 3px
+      background: #fff
+      content: ''
+
+  &-left
+    @extend .-line-top
+
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      width: 60px
+      height: 3px
+      background: #fff
+      content: ''
+
+.-mw-310
+  max-width: 310px
+
+.-mw-750
+  max-width: 750px
+
+.-mw-900
+  max-width: 900px
+
+.-mw190
+  max-width: 190px
+
+.-mb10
+  margin-bottom: 10px
+
+.-mb20
+  margin-bottom: 20px
+
+.-arrow-right
+
+  &::after
+    display: inline-block
+    border-top: 2px solid #fff
+    border-right: 2px solid #fff
+    +transform(rotate(45deg))
+    width: 8px
+    height: 8px
+    margin-left: 10px
+    content: ''
+
+.-circle-plus
+  width: 20px
+  height: 20px
+  line-height: 20px
+  text-align: center
+  border: 2px solid #fff
+  +border_radius(50%)
+  display: inline-block
+
+
+.uk-container
+  max-width: 767px
+  min-width: 320px
+
+.uk-text-large
+  font-size: 36px
+  letter-spacing: 4.5px
+
+.uk-margin-small-top
+  margin-top: 25px!important
+
+.uk-button
+  font-size: 24px
+  padding: 16px
+  +transition(all .3s ease-in-out)
+
+.uk-button-danger
+  +border_radius(10px)
+  background-color: #d0021b
+  +box_shadow(0 2px 8px 4px rgba(0, 0, 0, 0.5))
+  color: #ffffff
+
+  &:hover
+    background-color: #8e0314
+
+  &:active,
+  &:visited,
+  &:focus
+    background-color: #d0021b
+
+    &:hover
+      background-color: #8e0314
+
+.uk-navbar
+  background: #000
+  height: 80px
+
+  .uk-navbar-content
+    height: auto
+
+  .uk-navbar-flip
+    a
+      line-height: 80px
+      margin: 0 30px 0 0
+
+      &:last-child
+        margin: 0
+
+  .uk-navbar-center
+    max-width: calc(100% - 313px)
+    text-align: center
+
+    @media screen and (max-width: 1030px)
+      max-width: 75%
+
+  .uk-navbar-nav
+    display: inline-block
+    float: none
+
+    li
+      padding: 0 5px
+
+      a
+        background: transparent
+        border-bottom: 3px solid transparent
+        cursor: pointer
+        color: #fff
+        font-size: 20px
+        letter-spacing: 0.3px
+        padding: 0 10px
+        height: 80px
+        line-height: 80px
+
+      &.uk-active,
+      &:hover
+        a
+          border-bottom: 3px solid #fff
+
+.uk-panel-box
+  background: transparent
+  max-width: 1010px
+  margin: 0 auto
+  padding: 0
+  +box_sizing(border-box)
+
+  i
+    font-family: 'Merriweather-Italic', serif
+
+.uk-dotnav
+  >*
+    >*
+      width: 10px
+      height: 10px
+      background: rgba(255,255,255,.2)
+
+    &:hover
+      >*
+        background: #fff
+
+  >.uk-active>*
+    background: #fff
+
+.uk-slideset
+  +transition(height .3s ease-in-out)
+
+  li
+    overflow: hidden
+
+.uk-slidenav-position .uk-slidenav
+  display: inline-block!important
+  top: 100%
+  margin-top: 0
+
+.uk-slidenav-previous
+  display: inline-block
+  border-top: 2px solid #fff
+  border-left: 2px solid #fff
+  +transform(rotate(-45deg))
+  width: 12px
+  height: 12px
+  left: 100px!important
+
+  &::before
+    content: ''
+
+  &::after
+    content: ''
+
+.uk-slidenav-next
+  display: inline-block
+  border-top: 2px solid #fff
+  border-right: 2px solid #fff
+  +transform(rotate(45deg))
+  width: 12px
+  height: 12px
+  right: 100px!important
+
+  &::before
+    content: ''
+
+  &::after
+    content: ''
+
+.uk-form
+  max-width: 750px
+  width: 100%
+  display: block
+  margin: 40px auto 0
+
+  input:not([type]),
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=url],
+  input[type=search],
+  input[type=tel],
+  input[type=number],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=date],
+  input[type=month],
+  input[type=time],
+  input[type=week],
+  input[type=color],
+  select,
+  textarea
+    background: transparent
+    border: 3px solid #fff
+    width: 100%
+    height: 50px
+    font-size: 18px
+    letter-spacing: 1px
+    color: #ffffff
+    font-family: 'Roboto-Medium', serif
+    outline: none
+
+    &:focus
+      background: transparent
+      color: #ffffff
+      border: 3px solid #fff
+
+  textarea
+    min-height: 100px
+
+  select
+    max-width: 360px
+
+  option
+    color: #333
+
+  label
+    font-size: 18px
+    letter-spacing: 1px
+    color: #ffffff
+    font-family: 'Roboto-Medium', serif
+
+    i
+      margin-left: 5px
+
+  .uk-form-row
+    margin-bottom: 20px
+
+  .uk-form-contols
+    margin-top: 5px
+
+  .radio-label
+    margin-right: 20px
+    cursor: pointer
+
+  input[type=radio]:checked:before
+    background: #fff
+
+.uk-breadcrumb
+  li
+    line-height: 56px
+
+    a
+      font-size: 18px
+      letter-spacing: 1px
+      color: #ffffff
+      opacity: .5
+
+      &:visited
+      &:focus
+      &:active
+        color: #fff
+
+    &.uk-active
+      span
+        font-size: 18px
+        letter-spacing: 1px
+        color: #ffffff
+
+.uk-modal
+  .uk-modal-dialog
+    background: #000
+
+  .uk-close
+    color: #fff
+    opacity: 1
+
+
+
+.logo-header
+  max-width: 143px
+  margin-top: 10px
+
+.main__title
+  font-family: 'Roboto-Medium', serif
+  text-shadow: 6px 0 1px rgba(255,255,255,.4)
+  color: #fff
+  font-size: 36px
+  letter-spacing: 9px
+
+  &_excerpt
+    font-family: 'Merriweather-Italic', serif
+    display: block
+    text-shadow: none
+    font-size: 14px
+    letter-spacing: 0.6px
+
+.main-header
+  .uk-navbar
+    background: rgba(0,0,0,.5)
+    position: fixed
+    width: 100%
+    left: 0
+    top: 0
+    z-index: 3
+
+    .uk-navbar-center
+      max-width: 70%
+
+.main-footer
+
+  .uk-navbar-nav
+    margin: 0
+    text-align: left
+    float: left
+
+  .uk-navbar-center
+    padding: 0
+    overflow: hidden
+    height: 80px
+    background: url("../images/line-bottom.png") center center no-repeat
+    background-size: 100% 3px
+
+.copyright
+  font-size: 18px
+  letter-spacing: 1px
+  color: rgba(255,255,255,.5)
+  padding: 0 30px 0 30px
+  margin: 0 0 0 -15px
+  line-height: 80px
+  background: #000
+  position: relative
+  z-index: 1
+
+.download-info
+  width: 20px
+  height: 20px
+  background: #fff
+  color: #000
+  +border_radius(50%)
+  display: inline-block
+  font-size: 15px
+  font-family: 'Roboto-Bold', serif
+  line-height: 20px
+  text-align: center
+  outline: none
+
+  &:hover
+    text-decoration: none
+    color: #000
+
+  &:visited,
+  &:active,
+  &:focus
+    background: #fff
+    color: #000
+
+.download-info-large
+  width: 80px
+  height: 80px
+  background: #fff
+  color: #000
+  +border_radius(50%)
+  display: inline-block
+  font-size: 70px
+  font-family: 'Roboto-Bold', serif
+  line-height: 80px
+  text-align: center
+  outline: none
+
+  &:hover
+    text-decoration: none
+    color: #000
+
+  &:visited,
+  &:active,
+  &:focus
+    background: #fff
+    color: #000
+
+.section
+  padding: 100px 0
+  +box_sizing(border-box)
+  position: relative
+  background-size: cover
+
+  &::after
+    position: absolute
+    bottom: -3px
+    left: 0
+    width: 100%
+    height: 4px
+    content: ''
+    background: url("../images/line-bottom.png") center center no-repeat
+    z-index: 2
+
+  &::before
+    position: absolute
+    left: 50%
+    width: 15px
+    height: 15px
+    bottom: -3px
+    border-bottom: 4px solid rgba(255,255,255,.7)
+    border-right: 4px solid rgba(255,255,255,.7)
+    +transform(rotate(45deg))
+    margin-bottom: -5px
+    margin-left: -7.5px
+    content: ''
+    z-index: 2
+
+  &.no-line-bot
+    &::after
+      display: none
+
+    &::before
+      display: none
+
+  &__title
+    font-weight: 500
+    line-height: 45px
+    color: #ffffff
+    font-family: 'Roboto-Medium', serif
+    font-size: 18px
+    letter-spacing: 1px
+
+    &_small
+      font-weight: 500
+      color: #ffffff
+      font-family: 'Roboto-Medium', serif
+      font-size: 12px
+      letter-spacing: 0.7px
+
+    &_light
+      font-weight: 300
+      margin: 0
+      color: #ffffff
+      font-family: 'Roboto-Light', serif
+      font-size: 14px
+      letter-spacing: 0.5px
+
+  &__text
+    font-size: 24px
+    color: #ffffff
+
+    &_larger
+      color: #ffffff
+      font-size: 14px
+      letter-spacing: 0.5px
+
+    &_smaller
+      font-size: 18px
+      line-height: 1.33
+      color: #ffffff
+
+    &_regular
+      font-family: 'Roboto-Regular', serif
+      font-size: 18px
+      color: #fff
+
+    &_number
+      font-size: 150px
+      letter-spacing: 3.3px
+      color: #ffffff
+
+      &_light
+        font-size: 30px
+        letter-spacing: 0.7px
+        color: #ffffff
+        font-family: 'Roboto-Light', serif
+
+.store__btns
+  a
+    display: inline-block
+    &:first-child
+      margin-right: 37px
+
+.callback-widget
+  max-width: 475px
+  display: inline-block
+
+  .uk-form
+    font-size: 0
+    padding: 0
+    margin: 0
+
+    .uk-form-row
+      display: inline-block
+      width: calc(51% - 7px)
+      font-size: 24px
+      vertical-align: top
+      margin: 0 7px 0 0
+      padding: 0
+
+      &:last-child
+        width: calc(49% - 7px)
+
+      &:last-child
+        margin: 0 0 0 7px
+
+      input[type=text]
+        display: block
+        width: 100%
+        +box_sizing(border-box)
+        height: 55px
+        outline: none
+        +border_radius(10px)
+        border: solid 1px #ffffff
+        background: transparent
+        color: #fff
+        padding: 0 17px
+
+        &::-webkit-input-placeholder
+          color: #fff
+
+        &::-moz-placeholder
+          color: #fff
+
+      .uk-button
+        display: block
+        width: 100%
+        padding: 12px 0
+        text-align: center
+
+.small-widget
+  margin-top: 40px
+  padding: 16px 0 50px 0
+  p
+    font-family: 'Roboto-Regular', serif
+    color: #fff
+    font-size: 14px
+    letter-spacing: 0.8px
+
+  a
+    color: #fff
+    font-family: 'Roboto-Regular', serif
+    font-size: 16.5px
+    letter-spacing: 1.3px
+
+    &:hover
+      text-decoration: underline
+
+.circle
+  width: 100px
+  height: 100px
+  border: 2px solid transparent
+  +border_radius(50%)
+  text-align: center
+  p
+    font-size: 48px
+    line-height: 100px
+
+
+  &__white
+    @extend .circle
+    border-color: #fff
+    margin: 0 auto 20px
+    p
+      color: #ffffff
+
+.box-attention
+  background: transparent
+  padding: 0
+  max-width: 730px
+  margin: 0 auto
+
+.gss
+  &__infos
+    margin: 40px 0 0 180px
+
+    @media screen and (max-width: 1200px)
+      margin: 143px 0 0 80px
+
+    @media screen and (max-width: 1030px)
+      margin: 143px 0 0 0
+
+    .main__title
+
+      &_excerpt
+        margin: -10px 0 0 0
+
+    .store__btns
+      margin: 28px 0 0 0
+
+    .section
+
+      &__text
+        &_smaller
+          margin: 42px 0 0 0
+
+    .callback-widget
+      margin: 40px 0 0 0
+
+  &__slideset
+    max-width: 480px
+    margin: 25px 0 0 171px
+
+    @media screen and (max-width: 1200px)
+      margin: 25px 0 0 80px
+
+    @media screen and (max-width: 1030px)
+      margin: 25px 0 0 0
+
+  &__image
+    max-width: 370px
+    margin: 130px 0 0 0
+
+.reviews-widget
+  overflow: hidden
+  padding-bottom: 70px
+
+  > div
+    font-size: 16px
+    float: left
+
+    &:first-child
+      width: 280px
+      height: 280px
+      +border-radius(50%)
+      border: 3px solid #fff
+      +box_sizing(border-box)
+
+    &:last-child
+      width: calc(100% - 310px)
+      float: right
+      margin-top: 20px
+
+  &_ava
+    max-width: 210px
+    +border_radius(50%)
+    margin-top: 35px
+
+.ws
+  background-image: url("../images/ws-bg.png")
+
+  .gss
+    &__infos
+      margin: 81px 0 0 0
+
+.mps
+  background-image: url("../images/mps-bg.png")
+
+.kss
+  background-image: url("../images/kss-bg.png")
+
+.as
+  background-image: url("../images/as-bg.png")
+
+.cs
+  background-image: url("../images/cs-bg.png")
+
+  &__slideset
+
+    li
+      overflow: hidden
+      padding-bottom: 80px
+
+
+  .uk-slidenav-previous
+    left: 40px!important
+
+  .uk-slidenav-next
+    right: 40px!important
+
+.cgs
+  background-image: url("../images/cgs-bg.png")
+
+  .gss__slideset
+    margin-top: 180px
+
+    .-text-italic
+      display: block
+      margin-bottom: 10px
+
+  .gss__image
+    margin: 0
+
+.lds
+  background-image: url("../images/lds-bg.png")
+
+.rs
+  background-image: url("../images/rs-bg.png")
+
+  &_slideset
+    margin: 120px auto 0 auto
+    max-width: 900px
+
+.bas
+  background-image: url("../images/bas-bg.png")
+
+  &::after
+    display: none
+
+  &::before
+    display: none
+
+.ais
+  background-image: url("../images/ais-bg.png")
+
+  &__article
+    .uk-article-title
+    font-size: 32px
+    letter-spacing: 1.8px
+    text-align: center
+    color: #ffffff
+    font-family: 'Roboto-Medium', serif
+    display: block
+    padding: 20px 0
+    margin: 0
+    border-top: 3px solid #d0021b
+    border-bottom: 3px solid #d0021b
+
+    .uk-article-lead
+      font-size: 18px
+      line-height: 1.22
+      letter-spacing: 1px
+      color: #ffffff
+      font-family: 'Roboto-Medium', serif
+
+      p
+        font-size: 18px
+        line-height: 1.22
+        letter-spacing: 1px
+        color: #ffffff
+        font-family: 'Roboto-Medium', serif
+
+.was
+  background-image: url("../images/was-bg.png")
+
+  &__widget
+    padding-bottom: 80px
+
+  .rs_slideset
+    margin: 0 auto
+
+  &__switcher
+    margin-top: 60px
+    li
+      display: inline-block
+      margin: 0 15px
+      a
+        height: 32px
+        font-size: 24px
+        letter-spacing: 1.3px
+        color: #ffffff
+        padding: 10px 0
+        position: relative
+
+        &::after
+          width: 0
+          height: 3px
+          background: #d0021b
+          position: absolute
+          bottom: 0
+          left: 0
+          +transition(all .3s ease-in-out)
+          content: ''
+
+        &:hover
+          text-decoration: none
+          &::after
+            width: 100%
+
+      &.uk-active
+        a
+          &::after
+            width: 100%
+
+  .uk-slidenav-previous
+    left: 10px!important
+    border: none
+    width: auto
+    height: auto
+    +transform(none)
+    font-size: 18px
+    letter-spacing: 0.4px
+    color: #ffffff
+
+    &::before
+      display: inline-block
+      border-top: 2px solid #fff
+      border-left: 2px solid #fff
+      +transform(rotate(-45deg))
+      width: 12px
+      height: 12px
+      content: ''
+      margin-right: 5px
+      margin-top: 23px
+      float: left
+
+  .uk-slidenav-next
+    right: 10px!important
+    border: none
+    width: auto
+    height: auto
+    +transform(none)
+    font-size: 18px
+    letter-spacing: 0.4px
+    color: #ffffff
+
+    &::before
+      content: ''
+
+    &::after
+      display: inline-block
+      border-top: 2px solid #fff
+      border-right: 2px solid #fff
+      +transform(rotate(45deg))
+      width: 12px
+      height: 12px
+      content: ''
+      margin-left: 5px
+      line-height: 18px
+      float: right
+      margin-top: 24px
+
+.wabs
+  background-image: url("../images/wabs-bg.png")
+
+  .uk-panel-box
+    background: none
+    overflow: hidden
+    border: 3px solid #fff
+    max-width: 900px
+    margin: 0 auto
+    padding: 30px
+
+    > div
+      float: left
+      width: 100px
+
+      &:last-child
+        float: right
+        width: calc(100% - 140px)
+
+.rps
+
+  &__icons
+    text-align: center
+    font-size: 0
+    margin-top: 180px
+
+    a
+      font-size: 16px
+      display: inline-block
+      width: 25%
+      +box_sizing(border-box)
+      line-height: 100px
+      height: 100px
+      border: solid 3px transparent
+      opacity: .5
+      +transition(all .3s ease-in-out)
+      padding: 0 15px
+      cursor: default
+      margin-top: 20px
+
+      &:focus,
+      &:active,
+      &:visited
+        border: solid 3px transparent
+
+      &:hover
+        border-color: #d0021b
+        opacity: 1
+
+      img
+        height: 60px
+
+.nps
+  background-image: url("../images/nps-bg.png")
+
+  &__articles
+    max-width: 1000px
+    margin: 100px auto 0
+
+  &__article
+    padding: 40px
+    +box_sizing(border-box)
+    border: 3px solid #fff
+    margin-bottom: 30px
+
+    .uk-article-title
+      font-size: 24px
+      letter-spacing: 1.3px
+      color: #ffffff
+      font-family: 'Roboto-Regular', serif
+      margin: 0
+
+    .uk-article-lead
+      font-size: 18px
+      line-height: 1.22
+      letter-spacing: 0.4px
+      color: #ffffff
+
+      p
+        font-size: 18px
+        line-height: 1.22
+        letter-spacing: 0.4px
+        color: #ffffff
+
+    &_socials
+      margin-top: 20px
+
+      > a
+        margin: 0 15px
+
+    &_thumb
+      max-width: 260px
+
+    &_time
+      font-size: 18px
+      letter-spacing: 1px
+      color: #ffffff
+
+    &_comment
+      opacity: 0.5
+      font-size: 18px
+      letter-spacing: 1px
+      color: #ffffff
+      margin-left: 25px
+
+    overflow: hidden
+    > div
+      float: left
+      width: 260px
+
+      &:last-child
+        float: right
+        width: calc(100% - 300px)
+
+.nss
+  &__content
+    background: #000
+    padding: 40px
+
+    &_info
+      overflow: hidden
+
+      .uk-article
+        padding: 0
+        border: none
+        border-bottom: solid 1px #ffffff
+        padding-bottom: 40px
+
+
+  &__wrap
+    max-width: 1095px
+    +box_sizing(border-box)
+    margin: 0 auto
+
+  .uk-button
+    height: 56px
+    padding: 0 16px
+    line-height: 56px
+
+.download-info-modal
+  overflow: hidden
+
+  > div
+    width: 80px
+    float: left
+
+    &:last-child
+      float: right
+      width: calc(100% - 100px)
