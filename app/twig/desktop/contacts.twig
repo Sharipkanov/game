@@ -1,0 +1,61 @@
+{% extends "../layouts/app.twig" %}
+
+{% block content %}
+
+    <section class="section" style="background-image: url('../../images/ws-bg.png')">
+        <div class="uk-container uk-container-center uk-text-center">
+            <div class="uk-margin-large-top"></div>
+            <h1 class="section__title uk-margin-large-top">Напишите нам</h1>
+            <h3 class="section__title_small">Вы можете в любое время суток связаться с нами <br>
+                по любым вопросам – узнать интересующую вас информацию,<br>
+                оставить отзыв, сообщить о технических проблемах. Мы ответим вам <br>
+                в самое ближайшее время – если не в течение 1 часа, <br>
+                то точно в течение 1 дня. Пишите!</h3>
+            <div class="uk-text-left">
+                <form class="uk-form">
+                    <fieldset data-uk-margin>
+                        <div class="uk-form-row">
+                            <label for="form-theme">Выберите тему обращения</label>
+                            <div class="uk-form-contols">
+                                <select name="theme" id="form-theme">
+                                    <option value="1">Проблема</option>
+                                    <option value="2">Проблема</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="uk-form-row">
+                            <label for="form-fullname">Ваше имя</label>
+                            <div class="uk-form-contols">
+                                <input type="text" name="fullname" id="form-fullname">
+                            </div>
+                        </div>
+                        <div class="uk-form-row">
+                            <label for="form-email">Ваш E-mail</label>
+                            <div class="uk-form-contols">
+                                <input type="email" name="email" id="form-email">
+                            </div>
+                        </div>
+                        <div class="uk-form-row">
+                            <label for="">Какое у Вас настроение?</label>
+                            <div class="uk-form-contols">
+                                <label class="radio-label"><input type="radio" name="mood" value="smile"> <i class="fri fri-smile"></i></label>
+                                <label class="radio-label"><input type="radio" name="mood" value="normal"> <i class="fri fri-normal"></i></label>
+                                <label class="radio-label"><input type="radio" name="mood" value="sad"> <i class="fri fri-sad"></i></label>
+                            </div>
+                        </div>
+                        <div class="uk-form-row">
+                            <label for="form-message">Сообщение</label>
+                            <div class="uk-form-contols">
+                                <textarea name="message" id="form-message"></textarea>
+                            </div>
+                        </div>
+                        <div class="uk-form-row uk-text-right">
+                            <button class="uk-button uk-button-danger" type="submit">Отправить</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

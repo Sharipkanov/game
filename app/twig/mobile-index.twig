@@ -1,4 +1,4 @@
-{% extends "layouts/app.twig" %}
+{% extends "layouts/mobile/app.twig" %}
 
 {% block content %}
 
@@ -14,7 +14,7 @@
                             <a href="#"><i class="fri fri-google-btn-red"></i></a>
                         </div>
                     </div>
-                    <div class="gss__slideset" data-uk-slideset="{default: 1, animation: 'scale'}">
+                    <div class="gss__slideset" data-uk-slideset="{default: 1, animation: 'scale'}" data-auto-height>
                         <div class="uk-slidenav-position">
                             <ul class="uk-grid uk-slideset">
                                 <li class="uk-text-center">
@@ -54,10 +54,34 @@
             <h2 class="section__title uk-text-center">Узнайте одну из самых мрачных тайн</h2>
             <h4 class="section__title_small uk-text-center">Хоррор-игра для Android и IPhone «Место» приоткроет перед вами одну из самых мрачных тайн современности. Она позволит вам узнать, что на самом <br>
                 деле происходит с теми, о ком в полицейских отчетах пишут: «пропал при невыясненных обстоятельствах». «Место» расскажет вам о том, что происходит на темной стороне нашего мира.</h4>
-            <div class="uk-grid uk-grid-width-medium-1-3 uk-grid-large uk-margin-large-top" data-uk-grid-margin>
-                <div class="uk-text-center"><img src="images/1.png" alt="" class="-mw-310"></div>
-                <div class="uk-text-center"><img src="images/2.png" alt="" class="-mw-310"></div>
-                <div class="uk-text-center"><img src="images/3.png" alt="" class="-mw-310"></div>
+            <div class="uk-margin-large-top">
+                <div class="gss__slideset uk-slidenav-position" data-uk-slider="{center:true}">
+                    <div class="uk-slider-container">
+                        <ul class="uk-grid uk-slider uk-grid-width-1-2">
+                            <li class="uk-text-center">
+                                <div class="small-widget">
+                                    <div class="uk-text-center">
+                                        <img src="images/1.png" alt="" class="gss__image -mw-310">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="uk-text-center">
+                                <div class="small-widget">
+                                    <div class="uk-text-center">
+                                        <img src="images/2.png" alt="" class="gss__image -mw-310">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="uk-text-center">
+                                <div class="small-widget">
+                                    <div class="uk-text-center">
+                                        <img src="images/3.png" alt="" class="gss__image -mw-310">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -91,7 +115,7 @@
                 <h4 class="section__title_small uk-text-center">Источником вдохновения для создателей игры для Android и IPhone «Место» послужили лучшие авторы и лучшие произведения в жанре хоррор – игры, фильмы и некоторые персонажи городских легенд.</h4>
             </div>
             <br>
-            <div class="uk-margin-large-top" data-uk-slideset="{default: 1, animation: 'scale'}">
+            <div class="uk-margin-large-top" data-uk-slideset="{default: 1, animation: 'scale'}" data-auto-height>
                 <div class="cs__slideset uk-slidenav-position">
                     <ul class="uk-grid uk-slideset">
                         <li class="uk-text-center">
@@ -150,54 +174,54 @@
             <h4 class="section__title_small uk-text-center">Создатели интерактивной истории «Место» постарались сделать ее лучше,<br>
                 интереснее,увлекательнее, реалистичнее и, конечно, страшнее всех <br>
                 интерактивных историй итекстовых квестов, <br> которые уже доступны для скачивания.</h4>
-            <div class="uk-grid uk-grid-large" data-uk-grid-margin>
-                <div class="uk-width-medium-3-5">
-                    <div class="gss__slideset" data-uk-slideset="{default: 1, animation: 'scale'}">
-                        <div class="uk-slidenav-position">
-                            <ul class="uk-grid uk-slideset">
-                                <li class="uk-text-left">
-                                    <div class="small-widget">
-                                        <p class="-line-top-left">
-                                            <i class="-text-italic-large">Максимальная реалистичность.</i>
-                                            В какой-то момент вы забудете, что это просто игра.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="uk-text-left">
-                                    <div class="small-widget">
-                                        <p class="-line-top-left">
-                                            <i class="-text-italic-large">Увлекательная и пугающая история,</i>
-                                            которая является основой игры и была написана профессиональным писателем
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="uk-text-left">
-                                    <div class="small-widget">
-                                        <p class="-line-top-left">
-                                            <i class="-text-italic-large">Оригинальные фотографии и рисунки.</i>
-                                            Специально для игры были выполнены рисунки и проведена фотоссесия
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="uk-text-left">
-                                    <div class="small-widget">
-                                        <p class="-line-top-left">
-                                            <i class="-text-italic-large">Актуальный дизайн.</i>
-                                            Специально для игры был разработан дизайн мессенджера. Прототипами для него послужили такие популярные мессенджеры, как WhatsApp, Viber, Telegram
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>
-                            <a href="" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>
-                        </div>
-                        <ul class="uk-slideset-nav uk-dotnav uk-flex-center"></ul>
-                    </div>
-                </div>
-                <div class="uk-width-medium-2-5">
-                    <div class="uk-text-left">
-                        <img src="images/iphone.png" alt="" class="gss__image">
-                    </div>
+            <div class="gss__slideset uk-slidenav-position" data-uk-slider="{center:true}">
+                <div class="uk-slider-container">
+                    <ul class="uk-grid uk-slider uk-grid-width-small-1-2">
+                        <li class="uk-text-center">
+                            <div class="small-widget">
+                                <div class="uk-text-center">
+                                    <img src="images/iphone.png" alt="" class="gss__image">
+                                </div>
+                                <p>
+                                    <i class="-text-italic-large">Максимальная реалистичность.</i>
+                                    В какой-то момент вы забудете, что это просто игра.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="uk-text-center">
+                            <div class="small-widget">
+                                <div class="uk-text-center">
+                                    <img src="images/iphone.png" alt="" class="gss__image">
+                                </div>
+                                <p>
+                                    <i class="-text-italic-large">Увлекательная и пугающая история,</i>
+                                    которая является основой игры и была написана профессиональным писателем
+                                </p>
+                            </div>
+                        </li>
+                        <li class="uk-text-center">
+                            <div class="small-widget">
+                                <div class="uk-text-center">
+                                    <img src="images/iphone.png" alt="" class="gss__image">
+                                </div>
+                                <p>
+                                    <i class="-text-italic-large">Оригинальные фотографии и рисунки.</i>
+                                    Специально для игры были выполнены рисунки и проведена фотоссесия
+                                </p>
+                            </div>
+                        </li>
+                        <li class="uk-text-center">
+                            <div class="small-widget">
+                                <div class="uk-text-center">
+                                    <img src="images/iphone.png" alt="" class="gss__image">
+                                </div>
+                                <p>
+                                    <i class="-text-italic-large">Актуальный дизайн.</i>
+                                    Специально для игры был разработан дизайн мессенджера. Прототипами для него послужили такие популярные мессенджеры, как WhatsApp, Viber, Telegram
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -209,7 +233,7 @@
             <h2 class="section__title uk-text-center">Вам придется постоянно делать выбор <br> между жизнью и смертью</h2>
             <h4 class="section__title_small uk-text-center">Страшная игра «Место» отличается высокой интерактивностью.
                 <br>Вам постоянно придется делать выбор, а не просто пролистывать историю.</h4>
-            <div class="uk-grid uk-grid-width-medium-1-5 uk-grid-small uk-margin-large-top" data-uk-grid-margin="">
+            <div class="lds__numbers uk-margin-large-top">
                 <div class="uk-text-center">
                     <p class="section__text_number">9</p>
                     <p class="section__text_number_light">Пугающих <br>концовок</p>
@@ -231,14 +255,8 @@
                     <p class="section__text_number_light">Разных <br>локаций</p>
                 </div>
             </div>
-            <div class="uk-text-center uk-margin-large-top">
-                <p class="section__text uk-text-left -mw-750 uk-display-inline-block uk-margin-large-top">Над созданием страшной игры «Место» работала целая команда. <br>
-                    Она включала писателей, художников, дизайнеров, программистов,<br>
-                    режиссеров, фотографов, актеров. Бюджет игры приблизился к бюджету <br>
-                    съемок полнометражного фильма. Время разработки составило <br> более 5 месяцев</p>
-            </div>
         </div>
     </section>
 
-    {% include 'layouts/sections/comments.twig' %}
+    {% include 'layouts/sections/mobile-comments.twig' %}
 {% endblock %}

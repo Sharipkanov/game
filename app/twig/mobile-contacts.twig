@@ -1,8 +1,7 @@
-{% extends "layouts/app.twig" %}
+{% extends "layouts/mobile/app.twig" %}
 
 {% block content %}
-
-    <section class="section" style="background-image: url('images/ws-bg.png')">
+    <section class="section" style="background-image: url('../../images/ws-bg.png')">
         <div class="uk-container uk-container-center uk-text-center">
             <div class="uk-margin-large-top"></div>
             <h1 class="section__title uk-margin-large-top">Напишите нам</h1>
@@ -49,7 +48,7 @@
                                 <textarea name="message" id="form-message"></textarea>
                             </div>
                         </div>
-                        <div class="uk-form-row uk-text-right">
+                        <div class="uk-form-row uk-text-center">
                             <button class="uk-button uk-button-danger" type="submit">Отправить</button>
                         </div>
                     </fieldset>
@@ -57,5 +56,6 @@
             </div>
         </div>
     </section>
+
 
 {% endblock %}

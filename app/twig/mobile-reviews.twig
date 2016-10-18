@@ -1,0 +1,60 @@
+{% extends "layouts/mobile/app.twig" %}
+
+{% block content %}
+    <section class="section" style="background-image: url('../../images/rps-bg.png')">
+        <div class="uk-container uk-container-center">
+            <br>
+            <h1 class="section__title uk-text-center uk-margin-large-top">Пресса о нас</h1>
+            <div class="uk-text-center">
+                <div class="-mw-750 uk-display-inline-block">
+                    <p class="section__title_small uk-margin-large-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p class="section__title_small uk-margin-large-top">«…игра просто ужасно крутая, каждую минуту пробирает <br> до <br>
+                        мурашек. Рекомендуем к покупке всем!!!»</p>
+                    <p><i class="-text-italic-largest -text-light">Activison</i></p>
+                </div>
+
+                <div class="rs_slideset" data-uk-slideset="{default: 1, animation: 'scale'}" data-auto-height>
+                    <div class="uk-slidenav-position">
+                        <ul class="uk-grid uk-slideset">
+                            <li>
+                                <div class="rps__icons">
+                                    <a href="#" onclick="return false;"><img src="../../images/logos/activision.png" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rps__icons">
+                                    <a href="#" onclick="return false;"><img src="../../images/logos/aif-logo.png" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rps__icons">
+                                    <a href="#" onclick="return false;"><img src="../../images/logos/blizzard-entertainment-logo.png" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rps__icons">
+                                    <a href="#" onclick="return false;"><img src="../../images/logos/capcom-logo.png" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rps__icons">
+                                    <a href="#" onclick="return false;"><img src="../../images/logos/new-york-times.png" alt=""></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rps__icons">
+                                    <a href="#" onclick="return false;"><img src="../../images/logos/s-e-g-a-logo.png" alt=""></a>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>
+                        <a href="" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>
+                    </div>
+                    <ul class="uk-slideset-nav uk-dotnav uk-flex-center"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'layouts/sections/mobile-comments.twig' %}
+{% endblock %}

@@ -5,6 +5,7 @@ body
   background: #aaa
   line-height: 1.2
   font-family: 'Roboto-Regular', serif
+  min-width: 960px
 
 a
   &:hover
@@ -81,15 +82,19 @@ iframe
 
 .-mw-310
   max-width: 310px
+  width: 100%
 
 .-mw-750
   max-width: 750px
+  width: 100%
 
 .-mw-900
   max-width: 900px
+  width: 100%
 
 .-mw190
   max-width: 190px
+  width: 100%
 
 .-mb10
   margin-bottom: 10px
@@ -122,6 +127,7 @@ iframe
 .uk-container
   max-width: 1392px
   min-width: 960px
+  +box_sizing(border-box)
 
 .uk-text-large
   font-size: 36px
@@ -164,6 +170,8 @@ iframe
       line-height: 80px
       margin: 0 30px 0 0
 
+      @media screen and (max-width: 1030px)
+        margin: 0 5px 0 0
       &:last-child
         margin: 0
 
@@ -341,8 +349,8 @@ iframe
       color: #ffffff
       opacity: .5
 
-      &:visited
-      &:focus
+      &:visited,
+      &:focus,
       &:active
         color: #fff
 
@@ -360,7 +368,9 @@ iframe
     color: #fff
     opacity: 1
 
-
+.site-wrapper
+  width: 100%
+  min-width: 960px
 
 .logo-header
   max-width: 143px
@@ -381,17 +391,29 @@ iframe
     text-shadow: none
 
 .main-header
+  height: auto
+
   .uk-navbar
     background: rgba(0,0,0,.5)
-    position: fixed
-    width: 100%
-    left: 0
-    top: 0
+    position: relative
     z-index: 3
+    min-width: 960px
+
+    @media screen and (max-width: 960px)
+      li
+        a
+          font-size: 17px
+
+    &.active
+      background: #000
+      box-shadow: 0 0 15px #ae090d
 
     .uk-navbar-center
       max-width: 70%
-  
+
+      @media screen and (max-width: 1030px)
+        max-width: 75%
+
 .main-footer
 
   .uk-navbar-nav
@@ -468,6 +490,7 @@ iframe
   +box_sizing(border-box)
   position: relative
   background-size: cover
+  min-width: 960px
 
   &::after
     position: absolute
@@ -545,6 +568,7 @@ iframe
       font-size: 150px
       letter-spacing: 3.3px
       color: #ffffff
+      font-family: 'Merriweather-Regular', serif
 
       &_light
         font-size: 30px
@@ -663,7 +687,10 @@ iframe
         margin: 13px 0 0 0
 
     .store__btns
-      margin: 28px 0 0 0
+      margin: 18px 0 0 0
+
+      a
+        margin-top: 10px
 
     .section
 
@@ -715,10 +742,17 @@ iframe
 
 .ws
   background-image: url("../images/ws-bg.png")
+  margin-top: -80px
 
   .gss
     &__infos
-      margin: 143px 0 0 180px
+      margin: 143px 0 0 28%
+
+      @media screen and (max-width: 1200px)
+        margin: 143px 0 0 18%
+
+      @media screen and (max-width: 1030px)
+        margin: 143px 0 0 5%
 
 .mps
   background-image: url("../images/mps-bg.png")

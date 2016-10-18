@@ -1,0 +1,42 @@
+{% extends "../layouts/app.twig" %}
+
+{% block content %}
+    <section class="section nss" style="background-image: url('../../images/nps-bg.png')">
+        <div class="uk-container uk-container-center">
+            <div class="nss__wrap uk-margin-bottom">
+                <div class="uk-grid uk-grid-large">
+                    <div class="uk-width-medium-2-3">
+                        <ul class="uk-breadcrumb">
+                            <li><a href="">Новости</a></li>
+                            <li class="uk-active"><span>Заголовок новости #1</span></li>
+                        </ul>
+                    </div>
+                    <div class="uk-width-medium-1-3 uk-text-right">
+                        <a href="" class="uk-button uk-button-danger">Все новости</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nss__content nss__wrap">
+                <div class="nss__content_info">
+                    <article class="nps__article uk-article">
+                        <div>
+                            <img src="http://placehold.it/260x260" alt="" class="nps__article_thumb">
+
+                            <div class="nps__article_socials uk-text-center">
+                                <a href="#"><i class="fri fri-facebook"></i></a>
+                                <a href="#"><i class="fri fri-vk"></i></a>
+                                <a href="#"><i class="fri fri-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="uk-article-title">Заголовок новости #1</h2>
+                            <p class="uk-article-meta"><span class="nps__article_time">12.09.16</span><span class="nps__article_comment">25 комментариев</span></p>
+                            <p class="uk-article-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
